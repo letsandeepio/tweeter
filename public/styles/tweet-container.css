@@ -1,4 +1,4 @@
-.tweet {
+article.tweet {
   border: solid 4px black;
   padding: 30px;
   height: 250px;
@@ -46,6 +46,16 @@
 }
 
 .tweet-actions {
+  display: flex;
   flex-grow: 1;
-  text-align: right;
+  justify-content: flex-end;
+}
+
+.tweet-action-icon {
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.tweet-action-icon:hover {
+  background-color: darkgrey;
 }
