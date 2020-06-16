@@ -19,6 +19,8 @@
 .userid {
   flex-grow: 1;
   text-align: right;
+  font-size: 1rem;
+  color: gray;
 }
 
 .tweet-profile-pic {
@@ -26,9 +28,24 @@
 }
 
 .tweet-content {
+  margin-top: 10px;
+  font-size: .8em;
   flex-grow: 1;
   border: 0px;
   border-bottom: solid 4px black;
 }
 
-.timest
+.timestamp {
+  font-size: .7em;
+}
+
+.tweet-footer {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.tweet-actions {
+  flex-grow: 1;
+  text-align: right;
+}
