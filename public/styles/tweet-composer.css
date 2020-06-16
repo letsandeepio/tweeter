@@ -39,4 +39,9 @@
 .counter {
   font-weight: bold;
   font-family: 'Bungee', cursive;
+  color: black;
+}
+
+.over-limit-red {
+  color: red;
 }
