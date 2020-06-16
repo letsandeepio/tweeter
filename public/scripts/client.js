@@ -4,3 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+$(document).ready(function () {
+  console.log('JQuery');
+  $('#tweet-text').on('keypress', function (event) {
+    console.log(event);
+  });
+});
