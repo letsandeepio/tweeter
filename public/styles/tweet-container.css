@@ -1,8 +1,19 @@
-.tweet {}
+.tweet {
+  border: solid 4px black;
+  padding: 30px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
 
 .tweet-header {
   display: flex;
   align-items: center;
+  margin: 5px;
+}
+
+.username {
+  margin-left: 5px;
 }
 
 .userid {
@@ -12,4 +23,10 @@
 
 .tweet-profile-pic {
   width: 50px;
+}
+
+.tweet-content {
+  flex-grow: 1;
+  border: 0px;
+  border-bottom: solid 4px black;
 }

@@ -28,7 +28,6 @@ body {
  */
 
 .container {
-  width: 50%;
-  max-width: fit-content;
+  width: 60%;
   margin: auto;
 }
