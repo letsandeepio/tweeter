@@ -6,7 +6,7 @@ article.tweet {
   flex-direction: column;
 }
 
-.tweet-header {
+article.tweet header {
   display: flex;
   align-items: center;
   margin: 5px;
@@ -27,7 +27,7 @@ article.tweet {
   width: 50px;
 }
 
-.tweet-content {
+article.tweet main {
   margin-top: 10px;
   font-size: .8em;
   flex-grow: 1;
