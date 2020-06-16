@@ -39,7 +39,7 @@ article.tweet main {
   font-size: .7em;
 }
 
-.tweet-footer {
+article.tweet footer {
   margin-top: 10px;
   display: flex;
   align-items: center;
