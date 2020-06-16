@@ -1,0 +1,15 @@
+.tweet {}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+}
+
+.userid {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.tweet-profile-pic {
+  width: 50px;
+}
