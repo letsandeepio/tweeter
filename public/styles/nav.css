@@ -9,7 +9,7 @@ nav {
   padding: 1.5em 2.5em;
 }
 
-.new-tweet {
+.cta-newtweet {
   display: flex;
   flex-direction: column;
 }

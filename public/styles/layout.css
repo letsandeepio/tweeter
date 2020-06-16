@@ -28,7 +28,7 @@ body {
  */
 
 .container {
-  width: 90%;
+  width: 50%;
+  max-width: fit-content;
   margin: auto;
-  border: solid 1px red;
 }

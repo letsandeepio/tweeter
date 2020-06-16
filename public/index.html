@@ -16,8 +16,8 @@
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
-  <!-- <link rel="stylesheet" href="/styles/debug.css" type="text/css" /> -->
+  <link rel="stylesheet" href="/styles/tweet-composer.css" type="text/css" />
+  <!--   <link rel="stylesheet" href="/styles/debug.css" type="text/css" /> -->
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -30,7 +30,7 @@
   <!-- Top nav bar (fixed) -->
   <nav id="nav">
     <span id="logo">tweeter</span>
-    <span class='newtweet'>
+    <span class='cta-newtweet'>
       <span><strong>Write</strong> a new tweet</span>
       <span>VVVVV</span>
     </span>
@@ -53,15 +53,20 @@
   <main class="container">
 
     <!-- Tweet composer -->
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
+    <section class="new-tweet-composer">
+
       <form action="/tweets" method="post">
-        <label for="tweet-text">What are you humming about?</label>
-        <textarea name="text" id="tweet-text"></textarea>
-        <div>
-          <button type="submit">Tweet</button>
+        <header>
+          <label for="tweet-text" class='tweet-label'>What are you humming about?</label>
+        </header>
+        <article>
+          <textarea name="text" id="tweet-text"></textarea>
+        </article>
+        <footer class='tweet-composer-footer'>
+          <button type="submit" class='btn-tweet'>Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
-        </div>
+        </footer>
+
       </form>
     </section>
 

@@ -1,0 +1,42 @@
+.new-tweet-composer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+}
+
+.tweet-label {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+#tweet-text {
+  margin: 5px;
+  font-size: 1rem;
+  width: 100%;
+  border: 0px;
+  border-bottom: solid 2px black;
+  background-color: #f4f1ec;
+  resize: none;
+  outline: none;
+}
+
+.btn-tweet {
+  font-weight: bold;
+  font-family: 'Bungee', cursive;
+  font-size: 1rem;
+  color: white;
+  background-color: #4152A1;
+  border: 0px;
+  padding: 10px;
+}
+
+.tweet-composer-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter {
+  font-weight: bold;
+  font-family: 'Bungee', cursive;
+}
