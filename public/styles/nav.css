@@ -1,0 +1,19 @@
+nav {
+  width: 100vw;
+  height: 120px;
+  background-color: #4056A1;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 2.5em;
+}
+
+.newtweet {
+  display: flex;
+  flex-direction: column;
+}
+
+#logo {
+  font-family: 'Bungee', cursive;
+}
