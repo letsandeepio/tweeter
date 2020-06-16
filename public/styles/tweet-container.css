@@ -6,6 +6,10 @@ article.tweet {
   flex-direction: column;
 }
 
+article.tweet:hover {
+  box-shadow: 5px 5px 0px #C5CBE3;
+}
+
 article.tweet header {
   display: flex;
   align-items: center;
