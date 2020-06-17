@@ -66,11 +66,18 @@ const renderTweets = function (tweets) {
 renderTweets(data);
 
 $('#js--new-tweet').submit(function (event) {
-  const seralizedTweetData = $.serialize($('#tweet-text').val());
-  $.ajax('/tweets', { method: 'POST', body: seralizedTweetData }).then(
+  event.preventDefault();
+  $.ajax('/tweets', { method: 'POST', data: $(this).serialize() }).then(
     function (morePostsHtml) {
       console.log('Success: ', morePostsHtml);
     }
   );
-  event.preventDefault();
 });
+
+const loadtweets = () => {
+  $.ajax('/tweets', { method: 'GET' }).then(function (tweetsData) {
+    console.log('Success: ', tweetsData);
+  });
+};
+
+loadtweets();
