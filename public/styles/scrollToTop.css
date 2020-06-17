@@ -1,0 +1,15 @@
+.scrollToTop {
+    padding: 10px;
+    text-align: center;
+    font-size: 50px;
+    color: #FF1401;
+    text-decoration: none;
+    position: fixed;
+    bottom: 75px;
+    right: 40px;
+    display: none;
+}
+
+.scrollToTop:hover {
+    text-decoration: none;
+}
