@@ -62,5 +62,6 @@ article.tweet footer {
 }
 
 .tweet-actions>div:hover {
+  color: white;
   background-color: #4056A1;
 }
