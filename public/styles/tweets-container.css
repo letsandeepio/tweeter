@@ -4,6 +4,7 @@ article.tweet {
   height: 250px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 
 article.tweet:hover {
@@ -61,5 +62,5 @@ article.tweet footer {
 }
 
 .tweet-actions>div:hover {
-  background-color: darkgrey;
+  background-color: #4056A1;
 }

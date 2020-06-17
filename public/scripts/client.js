@@ -22,15 +22,15 @@ const tweetData = {
 const createTweetElement = (tweetObj) => {
   return `<article class='tweet'>
         <header>
-          <div class="profile"><img src='images/034-lord-ram.png' class='tweet-profile-pic'></div>
+          <div class="profile"><img src='${tweetObj.user.avatars}' class='tweet-profile-pic'></div>
           <div class="username">${tweetObj.user.name}</div>
-          <div class="userid">@SirIsaac</div>
+          <div class="userid">${tweetObj.user.handle}</div>
         </header>
         <main>
-          I have seen further by standing on the shoulder of giants
+          ${tweetObj.content.text}
         </main>
         <footer>
-          <div class="timestamp">10 days ago</div>
+          <div class="timestamp">${tweetObj.created_at}</div>
           <div class="tweet-actions">
             <div><i class="far fa-flag"></i></div>
             <div><i class="fas fa-retweet"></i></div>
