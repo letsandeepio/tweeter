@@ -40,11 +40,22 @@ const renderTweets = function (tweets) {
 
 $('#js--new-tweet').submit(function (event) {
   event.preventDefault();
+  const tweetText = $('#tweet-text').val();
+  if (tweetText.length === 0) {
+    alert('Tweet cannot be empty');
+    return false;
+  }
+  if (tweetText.length > 140) {
+    alert('Your Tweet is too long');
+    return false;
+  }
   $.ajax('/tweets', { method: 'POST', data: $(this).serialize() }).then(
     function (morePostsHtml) {
       console.log('Success: ', morePostsHtml);
     }
   );
+  alert('tweet is posted');
+  $('#tweet-text').val('');
 });
 
 const loadtweets = () => {
