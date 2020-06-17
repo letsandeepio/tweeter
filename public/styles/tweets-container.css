@@ -1,3 +1,8 @@
+#tweets-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 article.tweet {
   border: solid 4px black;
   padding: 30px;
