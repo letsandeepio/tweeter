@@ -44,13 +44,15 @@ const renderTweets = function (tweets) {
 };
 
 $('#js--new-tweet').submit(function (event) {
+  $('#js--error-bar').slideUp();
   event.preventDefault();
   const tweetText = $('#tweet-text').val();
   if (tweetText.length === 0) {
-    alert('Tweet cannot be empty');
+    $('#js--error-bar').text('Tweet cannot be empty').slideDown();
     return false;
   }
   if (tweetText.length > 140) {
+    $('#js--error-bar').slideDown();
     alert('Your Tweet is too long');
     return false;
   }
