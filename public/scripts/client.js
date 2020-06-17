@@ -44,16 +44,16 @@ const renderTweets = function (tweets) {
 };
 
 $('#js--new-tweet').submit(function (event) {
-  $('#js--error-bar').slideUp();
+  const errorDiv = $('#js--error-bar');
+  errorDiv.slideUp();
   event.preventDefault();
   const tweetText = $('#tweet-text').val();
   if (tweetText.length === 0) {
-    $('#js--error-bar').text('Tweet cannot be empty').slideDown();
+    errorDiv.text('Tweet cannot be empty').slideDown();
     return false;
   }
   if (tweetText.length > 140) {
-    $('#js--error-bar').slideDown();
-    alert('Your Tweet is too long');
+    errorDiv.text('Your Tweet is too long').slideDown();
     return false;
   }
   $.ajax('/tweets', { method: 'POST', data: $(this).serialize() }).then(
