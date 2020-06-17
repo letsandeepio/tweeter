@@ -13,9 +13,10 @@ nav {
 
 .cta-newtweet {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+  text-decoration: none;
 }
 
 #logo {

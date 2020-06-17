@@ -1,8 +1,11 @@
+/* https://codepen.io/xonic/pen/KWMaqe */
+
 .arrow-container {
   position: relative;
   width: 24px;
   height: 24px;
   transform: translateY(-50%);
+  margin-right: 20px;
 }
 
 .chevron {

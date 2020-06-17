@@ -74,4 +74,9 @@ const loadtweets = () => {
 
 $(document).ready(function () {
   loadtweets();
+
+  $('#js--cta-newtweet').click(function (e) {
+    e.preventDefault();
+    $('#js--new-tweet').slideToggle();
+  });
 });
