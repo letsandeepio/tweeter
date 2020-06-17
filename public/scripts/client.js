@@ -17,12 +17,14 @@ const escape = function (str) {
 const createTweetElement = (tweetObj) => {
   return `<article class='tweet'>
         <header>
-          <div class="profile"><img src='${tweetObj.user.avatars}' class='tweet-profile-pic'></div>
+          <div class="profile"><img src='${
+            tweetObj.user.avatars
+          }' class='tweet-profile-pic'></div>
           <div class="username">${tweetObj.user.name}</div>
           <div class="userid">${tweetObj.user.handle}</div>
         </header>
         <main>
-          ${tweetObj.content.text}
+          ${escape(tweetObj.content.text)}
         </main>
         <footer>
           <div class="timestamp">${tweetObj.created_at}</div>
