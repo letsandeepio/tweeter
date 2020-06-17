@@ -77,6 +77,11 @@ $(document).ready(function () {
 
   $('#js--cta-newtweet').click(function (e) {
     e.preventDefault();
-    $('.tweet-composer').slideToggle();
+    $('.tweet-composer').slideToggle(function () {
+      console.log($('.tweet-composer').css('display'));
+      if ($('.tweet-composer').css('display') === 'block') {
+        $('#tweet-text').focus();
+      }
+    });
   });
 });
