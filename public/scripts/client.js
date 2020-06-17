@@ -71,4 +71,6 @@ const loadtweets = () => {
   });
 };
 
-loadtweets();
+$(document).ready(function () {
+  loadtweets();
+});
