@@ -66,11 +66,11 @@ const renderTweets = function (tweets) {
 renderTweets(data);
 
 $('#js--new-tweet').submit(function (event) {
-  console.log('Handler for .submit() called.');
   const seralizedTweetData = $.serialize($('#tweet-text').val());
   $.ajax('/tweets', { method: 'POST', body: seralizedTweetData }).then(
     function (morePostsHtml) {
       console.log('Success: ', morePostsHtml);
     }
   );
+  event.preventDefault();
 });
