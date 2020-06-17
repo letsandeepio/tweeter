@@ -77,6 +77,6 @@ $(document).ready(function () {
 
   $('#js--cta-newtweet').click(function (e) {
     e.preventDefault();
-    $('#js--new-tweet').slideToggle();
+    $('.tweet-composer').slideToggle();
   });
 });
