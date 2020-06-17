@@ -8,9 +8,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Test / driver code (temporary). Eventually will get this from the server.
-// Fake data taken from initial-tweets.json
-
 const createTweetElement = (tweetObj) => {
   return `<article class='tweet'>
         <header>
