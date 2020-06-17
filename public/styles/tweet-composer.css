@@ -1,11 +1,11 @@
-.new-tweet-composer {
+.tweet-composer {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   height: 200px;
 }
 
-.tweet-label {
+.tweet-composer label {
   font-weight: bold;
   font-size: 1em;
 }
@@ -31,7 +31,7 @@
   padding: 10px;
 }
 
-.tweet-composer-footer {
+.tweet-composer footer {
   display: flex;
   justify-content: space-between;
 }

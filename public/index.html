@@ -57,16 +57,16 @@
   <main class="container">
 
     <!-- Tweet composer -->
-    <section class="new-tweet-composer">
+    <section class="tweet-composer">
 
       <form action="/tweets" method="post">
         <header>
-          <label for="tweet-text" class='tweet-label'>What are you humming about?</label>
+          <label for="tweet-text">What are you humming about?</label>
         </header>
         <article>
           <textarea name="text" id="tweet-text"></textarea>
         </article>
-        <footer class='tweet-composer-footer'>
+        <footer>
           <button type="submit" class='btn-tweet'>Tweet</button>
           <output name="counter" class="counter" for="tweet-text" id='js--tweet-counter'>140</output>
         </footer>
