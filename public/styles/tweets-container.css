@@ -43,7 +43,7 @@ article.tweet main {
   flex-grow: 1;
   border: 0px;
   border-bottom: solid 4px black;
-  paddig-bottom: 10px;
+  padding-bottom: 8px;
 }
 
 .timestamp {

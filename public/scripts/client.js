@@ -57,11 +57,12 @@ $('#js--new-tweet').submit(function (event) {
     return false;
   }
   $.ajax('/tweets', { method: 'POST', data: $(this).serialize() }).then(
-    function (morePostsHtml) {
-      console.log('Success: ', morePostsHtml);
+    function () {
+      $('#tweets-container').empty();
+      loadtweets();
     }
   );
-  alert('tweet is posted');
+
   $('#tweet-text').val('');
 });
 
