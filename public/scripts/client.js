@@ -41,6 +41,15 @@ const renderTweets = function (tweets) {
   for (const tweet of tweets) {
     $('#tweets-container').append(createTweetElement(tweet));
   }
+  $('article.tweet').on('mouseenter', function () {
+    console.log('working');
+    $(this).find('.tweet-actions').css('visibility', 'visible');
+  });
+
+  $('article.tweet').on('mouseleave', function () {
+    console.log('working');
+    $(this).find('.tweet-actions').css('visibility', 'hidden');
+  });
 };
 
 $('#js--new-tweet').submit(function (event) {
