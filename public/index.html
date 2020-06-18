@@ -49,55 +49,59 @@
 
   </nav>
 
+  <!--responsive container -->
 
-  <!-- Header -->
-  <header class='header'>
-    <div>
-      <img src='images/profile-hex.png'>
-    </div>
-    <div>
-      <span class='firstname'>Yoga</span><span>Afficiando</span>
-    </div>
-  </header>
-
-  <!-- Page-specific (main) content here -->
-  <main class="container">
-
-    <!-- Tweet composer -->
-    <div class="error" id='js--error-bar'>This is a error</div>
-    <section class="tweet-composer">
-
-      <form id='js--new-tweet'>
-        <header>
-          <label for="tweet-text">What are you humming about?</label>
-        </header>
-        <article>
-          <textarea name="text" id="tweet-text"></textarea>
-        </article>
-        <footer>
-          <button type="submit" class='btn-tweet'>Tweet</button>
-          <output name="counter" class="counter" for="tweet-text" id='js--tweet-counter'>140</output>
-        </footer>
-
-      </form>
-    </section>
+  <section class='main-container'>
 
 
-    <section id="tweets-container">
+    <!-- Header -->
+    <header class='header'>
+      <div>
+        <img src='images/profile-hex.png'>
+      </div>
+      <div>
+        <span class='firstname'>Yoga</span><span>Afficiando</span>
+      </div>
+    </header>
 
-    </section>
+    <!-- Page-specific (main) content here -->
+    <main class="container">
 
-    <div style="margin-top: 300px">Icons made by <a href="https://www.flaticon.com/authors/eucalyp"
-        title="Eucalyp">Eucalyp</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-    </div>
-  </main>
+      <!-- Tweet composer -->
+      <div class="error" id='js--error-bar'>This is a error</div>
+      <section class="tweet-composer">
 
+        <form id='js--new-tweet'>
+          <header>
+            <label for="tweet-text">What are you humming about?</label>
+          </header>
+          <article>
+            <textarea name="text" id="tweet-text"></textarea>
+          </article>
+          <footer>
+            <button type="submit" class='btn-tweet'>Tweet</button>
+            <output name="counter" class="counter" for="tweet-text" id='js--tweet-counter'>140</output>
+          </footer>
+
+        </form>
+      </section>
+
+
+      <section id="tweets-container">
+
+      </section>
+
+
+    </main>
+  </section>
   <a href="#" class="scrollToTop">
     <i class="fas fa-arrow-circle-up"></i>
   </a>
-
+  <div class='foot-note'>Icons made by <a href="https://www.flaticon.com/authors/eucalyp" title="Eucalyp">Eucalyp</a>
+    from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+  </div>
 </body>
-
+</section>
 <!-- App JS -->
 <script type="text/javascript" src="/scripts/client.js"></script>
 <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>

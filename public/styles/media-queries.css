@@ -8,12 +8,21 @@
     padding-top: 120px;
   }
   .header {
-    padding-top: none;
+    margin: 100px;
+    font-size: 2rem;
   }
   #logo {
     font-size: 2rem;
   }
   .cta-newtweet {
     transform: none;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .container {
+    width: 110%;
+    margin-right: 30px;
   }
 }

@@ -31,3 +31,10 @@ body {
   width: 90%;
   margin: auto;
 }
+
+.foot-note {
+  margin-top: 200px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1rem;
+}
