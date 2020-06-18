@@ -1,13 +1,13 @@
 nav {
   width: 100vw;
   height: 120px;
-  color: #ffffff;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5em 2.5em;
-  position: fixed;
-  top: 0;
+  background: url('/images/back-pattern.png');
+  background-color: #D89820;
 }
 
 .cta-newtweet {

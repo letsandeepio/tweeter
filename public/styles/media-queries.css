@@ -2,7 +2,10 @@
 
 @media only screen and (min-width: 1024px) {
   nav {
+    background: none;
     background-color: #4056A1;
+    position: fixed;
+    top: 0;
   }
   body {
     padding-top: 120px;
@@ -13,9 +16,11 @@
   }
   #logo {
     font-size: 2rem;
+    color: white;
   }
   .cta-newtweet {
     transform: none;
+    color: white;
   }
   .main-container {
     display: flex;
