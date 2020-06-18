@@ -19,18 +19,18 @@
     "content": {
       "text": "Take the first A out of Abraham and put it at the end. You get Brahama. There’s the ancient connection right there."
     },
-    "created_at": 1592508426
+    "created_at": 1461116232227
   },
   {
     "user": {
       "name": "Budha",
-      "avatars": "/images/006-lord-ram.png",
+      "avatars": "/images/006-buddha.png",
       "handle": "@budhatheenlightened"
     },
     "content": {
       "text": "The mind is everything. What you think you become."
     },
-    "created_at": 1592508426
+    "created_at": 1461116232227
   },
   {
     "user": {
@@ -42,5 +42,5 @@
       "text": "Call me in any situation where an obstacle is preventing you from success. "
     },
     "created_at": 1461116232227
-  },
+  }
 ]
