@@ -1,24 +1,46 @@
 [
   {
     "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
+      "name": "Lord Ram",
+      "avatars": "/images/034-lord-ram.png",
+      "handle": "@sonofdashrath"
     },
     "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "Be the best version of you, because no one is you or can be you."
     },
     "created_at": 1461116232227
   },
   {
     "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
+      "name": "Brahma",
+      "avatars": "/images/005-brahma.png",
+      "handle": "@brahma"
     },
-    "created_at": 1461113959088
-  }
+    "content": {
+      "text": "Take the first A out of Abraham and put it at the end. You get Brahama. There’s the ancient connection right there."
+    },
+    "created_at": 1592508426
+  },
+  {
+    "user": {
+      "name": "Budha",
+      "avatars": "/images/006-lord-ram.png",
+      "handle": "@budhatheenlightened"
+    },
+    "content": {
+      "text": "The mind is everything. What you think you become."
+    },
+    "created_at": 1592508426
+  },
+  {
+    "user": {
+      "name": "Ganesh",
+      "avatars": "/images/009-ganesha.png",
+      "handle": "@laddoolover"
+    },
+    "content": {
+      "text": "Call me in any situation where an obstacle is preventing you from success. "
+    },
+    "created_at": 1461116232227
+  },
 ]
