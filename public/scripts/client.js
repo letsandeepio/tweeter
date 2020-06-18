@@ -27,7 +27,7 @@ const createTweetElement = (tweetObj) => {
           ${escape(tweetObj.content.text)}
         </main>
         <footer>
-          <div class="timestamp">${tweetObj.created_at}</div>
+          <div class="timestamp">${moment(tweetObj.created_at).fromNow()}</div>
           <div class="tweet-actions">
             <div><i class="far fa-flag"></i></div>
             <div><i class="fas fa-retweet"></i></div>
