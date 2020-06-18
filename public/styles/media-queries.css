@@ -1,0 +1,16 @@
+/* Desktop styles */
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+  }
+  body {
+    padding-top: 120px;
+  }
+  .header {
+    paddingt-top: none;
+  }
+  #logo {
+    font-size: 2rem;
+  }
+}

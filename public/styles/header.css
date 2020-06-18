@@ -8,6 +8,7 @@
   background: url('/images/back-pattern.png');
   background-color: #D89820;
   color: white;
+  padding-top: 50px;
 }
 
 .header .firstname {

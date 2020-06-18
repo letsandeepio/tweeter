@@ -1,7 +1,6 @@
 nav {
   width: 100vw;
   height: 120px;
-  background-color: #4056A1;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -17,8 +16,10 @@ nav {
   align-items: center;
   color: white;
   text-decoration: none;
+  transform: scale(10%);
 }
 
 #logo {
   font-family: 'Bungee', cursive;
+  font-size: 3rem;
 }
