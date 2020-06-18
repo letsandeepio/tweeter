@@ -8,9 +8,12 @@
     padding-top: 120px;
   }
   .header {
-    paddingt-top: none;
+    padding-top: none;
   }
   #logo {
     font-size: 2rem;
+  }
+  .cta-newtweet {
+    transform: none;
   }
 }
