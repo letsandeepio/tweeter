@@ -1,9 +1,8 @@
-const TWEET_LIMIT = 140;
+const TWEET_LIMIT = 140; //tweet limit constant, in case, in future we want to increase the tweet limit.
 
 $(document).ready(function () {
-  console.log('JQuery');
   $('#tweet-text').on('keyup', function (event) {
-    let charRemaining = TWEET_LIMIT - $(this).val().length;
+    const charRemaining = TWEET_LIMIT - $(this).val().length;
     const tweetCounter = $('#js--tweet-counter');
 
     if (charRemaining < 0) {
