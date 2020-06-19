@@ -1,25 +1,25 @@
 nav {
   width: 100vw;
   height: 120px;
-  color: white;
+  color: $font-color-light;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5em 2.5em;
   background: url('/images/back-pattern.png');
-  background-color: #D89820;
+  background-color: $background-color;
 }
 
 .cta-newtweet {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: $font-color-light;
   text-decoration: none;
   transform: scale(0.8);
 }
 
 #logo {
-  font-family: 'Bungee', cursive;
+  font-family: $secondary-font-family;
   font-size: 3rem;
 }

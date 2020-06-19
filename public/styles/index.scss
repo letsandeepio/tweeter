@@ -1,13 +1,15 @@
 $background-color: #d89820;
 $base-nav-bar-color: #4056a1;
 $font-color-light: #fff;
+$overlimit-color: red;
 $base-font-family: 'Source Sans Pro', sans-serif;
+$secondary-font-family: 'Bungee', cursive;
 
 @import './arrow-container';
 @import './header';
 @import './layout';
-@import './media-queries';
 @import './nav';
 @import './scrollToTop';
 @import './tweet-composer';
 @import './tweets-container';
+@import './media-queries';

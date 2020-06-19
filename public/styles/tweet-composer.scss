@@ -4,11 +4,14 @@
   flex-direction: column;
   height: 200px;
   display: none;
-}
-
-.tweet-composer label {
-  font-weight: bold;
-  font-size: 1em;
+  label {
+    font-weight: bold;
+    font-size: 1em;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 #tweet-text {
@@ -24,27 +27,22 @@
 
 .btn-tweet {
   font-weight: bold;
-  font-family: 'Bungee', cursive;
+  font-family: $secondary-font-family;
   font-size: 1rem;
   color: white;
-  background-color: #4152A1;
+  background-color: $base-nav-bar-color;
   border: 0px;
   padding: 10px;
 }
 
-.tweet-composer footer {
-  display: flex;
-  justify-content: space-between;
-}
-
 .counter {
   font-weight: bold;
-  font-family: 'Bungee', cursive;
+  font-family: $secondary-font-family;
   color: black;
 }
 
 .over-limit-red {
-  color: red;
+  color: $overlimit-color;
 }
 
 .error {
@@ -53,10 +51,10 @@
   font-weight: 400;
   line-height: 1.5;
   text-align: left;
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
   border: 1px solid transparent;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   color: #721c24;
   background-color: #f8d7da;
   border-color: #f5c6cb;
