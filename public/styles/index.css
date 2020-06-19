@@ -1,0 +1,346 @@
+/* https://codepen.io/xonic/pen/KWMaqe */
+.arrow-container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-100%);
+  margin-right: 20px;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before, .chevron:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+.header {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: url("/images/back-pattern.png");
+  background-color: #d89820;
+  color: white;
+  padding-top: 50px;
+  font-size: 3rem;
+}
+.header .firstname {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.foot-note {
+  margin-top: 200px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  nav {
+    background: none;
+    background-color: #4056A1;
+    position: fixed;
+    top: 0;
+  }
+
+  body {
+    padding-top: 120px;
+  }
+
+  .header {
+    margin: 100px;
+    font-size: 2rem;
+  }
+
+  #logo {
+    font-size: 2rem;
+    color: white;
+  }
+
+  .cta-newtweet {
+    transform: none;
+    color: white;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container {
+    width: 110%;
+    margin-right: 30px;
+  }
+}
+nav {
+  width: 100vw;
+  height: 120px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 2.5em;
+  background: url("/images/back-pattern.png");
+  background-color: #D89820;
+}
+
+.cta-newtweet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  transform: scale(0.8);
+}
+
+#logo {
+  font-family: "Bungee", cursive;
+  font-size: 3rem;
+}
+
+.scrollToTop {
+  padding: 10px;
+  text-align: center;
+  font-size: 50px;
+  color: #FF1401;
+  text-decoration: none;
+  position: fixed;
+  bottom: 75px;
+  right: 40px;
+  display: none;
+}
+
+.scrollToTop:hover {
+  text-decoration: none;
+}
+
+.tweet-composer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  display: none;
+}
+
+.tweet-composer label {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+#tweet-text {
+  margin: 5px;
+  font-size: 1.5rem;
+  width: 100%;
+  border: 0px;
+  border-bottom: solid 4px black;
+  background-color: #f4f1ec;
+  resize: none;
+  outline: none;
+}
+
+.btn-tweet {
+  font-weight: bold;
+  font-family: "Bungee", cursive;
+  font-size: 1rem;
+  color: white;
+  background-color: #4152A1;
+  border: 0px;
+  padding: 10px;
+}
+
+.tweet-composer footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter {
+  font-weight: bold;
+  font-family: "Bungee", cursive;
+  color: black;
+}
+
+.over-limit-red {
+  color: red;
+}
+
+.error {
+  display: none;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  margin-top: 1rem;
+}
+
+#tweets-container {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 40px;
+}
+
+article.tweet {
+  border: solid 4px black;
+  padding: 30px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+article.tweet:hover {
+  box-shadow: 5px 5px 0px #C5CBE3;
+}
+
+article.tweet header {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.username {
+  margin-left: 5px;
+}
+
+.userid {
+  flex-grow: 1;
+  text-align: right;
+  font-size: 1rem;
+  color: gray;
+}
+
+.tweet-profile-pic {
+  width: 50px;
+}
+
+article.tweet main {
+  margin-top: 10px;
+  font-size: 0.8em;
+  flex-grow: 1;
+  border: 0px;
+  border-bottom: solid 4px black;
+  padding-bottom: 8px;
+}
+
+.timestamp {
+  font-size: 0.7em;
+}
+
+article.tweet footer {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.tweet-actions {
+  visibility: hidden;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.tweet-actions > div {
+  margin-right: 10px;
+  padding: 2px;
+}
+
+.tweet-actions > div:hover {
+  color: white;
+  background-color: #4056A1;
+}
+
+/*# sourceMappingURL=index.css.map */
