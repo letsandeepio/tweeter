@@ -2,18 +2,24 @@
 /* eslint-disable camelcase */
 /* global $ */
 
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+/* Author: Sandeep Kumar Chopra
+    Author Github: github.com/letsandeepio
+    Email: sandeepchopra7@gmail.com
+    Project Name: Tweeter
+    File Name: client.js
+    Project description: A full stack twitter-like app with basic & limited functionality
+    */
 
+//All utitlity helper functions goes here
+
+//copied from compass for escaping the user tweet content for avoiding XSS injection
 const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
+// given a tweet obj, returns HTML for rendering the tweet into the DOM
 const createTweetElement = (tweetObj) => {
   return `<article class='tweet'>
         <header>
@@ -37,10 +43,8 @@ const createTweetElement = (tweetObj) => {
       </article>`;
 };
 
-const renderTweets = function (tweets) {
-  for (const tweet of tweets) {
-    $('#tweets-container').append(createTweetElement(tweet));
-  }
+//helper function to assign event listeners for individual tweets to show and hide tweet actions upon hover.
+const attachEventListeners = () => {
   $('article.tweet').on('mouseenter', function () {
     console.log('working');
     $(this).find('.tweet-actions').css('visibility', 'visible');
@@ -52,37 +56,46 @@ const renderTweets = function (tweets) {
   });
 };
 
-$('#js--new-tweet').submit(function (event) {
-  const errorDiv = $('#js--error-bar');
-  errorDiv.slideUp();
-  event.preventDefault();
-  const tweetText = $('#tweet-text').val();
-  if (tweetText.length === 0) {
-    errorDiv.text('Tweet cannot be empty').slideDown();
-    return false;
+//provided an array of tweetObj , generate tweet html and append it to DOM, and runs a callback
+const renderTweets = function (tweets, callback) {
+  for (const tweet of tweets) {
+    $('#tweets-container').append(createTweetElement(tweet));
   }
-  if (tweetText.length > 140) {
-    errorDiv.text('Your Tweet is too long').slideDown();
-    return false;
-  }
-  $.ajax('/tweets', { method: 'POST', data: $(this).serialize() }).then(
-    function () {
-      $('#tweets-container').empty();
-      loadtweets();
-    }
-  );
+  callback();
+};
 
-  $('#tweet-text').val('');
-});
-
+//load tweets through AJAX Request
 const loadtweets = () => {
   $.ajax('/tweets', { method: 'GET' }).then(function (tweetsData) {
-    renderTweets(tweetsData);
+    renderTweets(tweetsData, attachEventListeners);
   });
 };
 
 $(document).ready(function () {
   loadtweets();
+
+  $('#js--new-tweet').submit(function (event) {
+    const errorDiv = $('#js--error-bar');
+    errorDiv.slideUp();
+    event.preventDefault();
+    const tweetText = $('#tweet-text').val();
+    if (tweetText.length === 0) {
+      errorDiv.text('Tweet cannot be empty').slideDown();
+      return false;
+    }
+    if (tweetText.length > 140) {
+      errorDiv.text('Your Tweet is too long').slideDown();
+      return false;
+    }
+    $.ajax('/tweets', { method: 'POST', data: $(this).serialize() }).then(
+      function () {
+        $('#tweets-container').empty();
+        loadtweets();
+      }
+    );
+
+    $('#tweet-text').val('');
+  });
 
   $('#js--cta-newtweet').click(function (e) {
     e.preventDefault();
