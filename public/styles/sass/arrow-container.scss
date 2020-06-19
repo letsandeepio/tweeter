@@ -25,7 +25,8 @@
   animation: move 3s ease-out 2s infinite;
 }
 
-.chevron:before, .chevron:after {
+.chevron:before,
+.chevron:after {
   content: ' ';
   position: absolute;
   top: 0;
