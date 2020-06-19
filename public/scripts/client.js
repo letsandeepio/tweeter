@@ -10,6 +10,12 @@
     Project description: A full stack twitter-like app with basic & limited functionality
     */
 
+//GLOBAL SETTINGS
+const ERROR_DISPLAY_DURATION = 10000; //number of seconds to display the error message.
+const TWEET_EMPTY_ERROR =
+  'Uh Ho! Please write something to share with the world.';
+const TWEET_LONG_ERROR =
+  'Uh Ho! Your tweet is too long to be carried away by our little birds.';
 //All utitlity helper functions goes here
 
 //copied from compass for escaping the user tweet content for avoiding XSS injection
@@ -71,6 +77,13 @@ const loadtweets = () => {
   });
 };
 
+const showError = (errorDivArg, text) => {
+  errorDivArg.slideDown().text(text);
+  window.setTimeout(function () {
+    errorDivArg.slideUp();
+  }, ERROR_DISPLAY_DURATION);
+};
+
 $(document).ready(function () {
   //global JQuery Objects;
   const errorDiv = $('#js--error-bar'); //for displaying the error
@@ -89,12 +102,10 @@ $(document).ready(function () {
 
     //tweet validation
     if (tweetTextVal.length === 0) {
-      errorDiv.slideDown().text('Tweet cannot be empty');
-      return false;
+      return showError(errorDiv, TWEET_EMPTY_ERROR);
     }
     if (tweetTextVal.length > 140) {
-      errorDiv.slideDown().text('Your Tweet is too long');
-      return false;
+      return showError(errorDiv, TWEET_LONG_ERROR);
     }
     //if successful
     $.ajax('/tweets', { method: 'POST', data: $(this).serialize() }).then(
@@ -103,7 +114,6 @@ $(document).ready(function () {
         loadtweets();
       }
     );
-
     //reset the contents of the tweet text area
     tweetText.val('');
   });
