@@ -40,3 +40,13 @@ Tweeter is a simple, single-page Twitter clone based on responsive web design pr
 
 - Express
 - Node 5.10.x or above
+- Body Parser
+- Chance
+- Express
+- MD5
+
+CDN
+
+- Moment.JS
+- Jquery
+- Normalize.css
