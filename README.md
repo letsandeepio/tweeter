@@ -10,6 +10,19 @@ Tweeter is a simple, single-page Twitter clone based on responsive web design pr
 4. **Timeout for tweet Errors** : If tweet is not validated due to some error, the said error message disappears after 10 seconds.
 5. **SASS** : Project make use of SASS variables & nesting in order to keep the css code modular by having all CSS code in components. It is still functional & fast using single entry point index.css for HTTP requests.
 6. **Moment.js**: user friendly relative time of the tweet is displayed to user using moment.js (a few seconds ago, one day ago etc.)
+7. **GitMoji**: Adopted gitmoji system of git commit messages to keep messages succint & understanding without sacrificing clarity.
+   Commit type | Emoji |
+   |:---------------------------|:----------------------------------------------|
+   | Initial commit | :tada: `:tada:` |
+   | New feature | :sparkles: `:sparkles:` |
+   | Bugfix | :bug: `:bug:` |
+   | Cosmetic | :lipstick: `:lipstick:` |
+   | Tests | :rotating_light: `:rotating_light:` |
+   | Improve format/structure | :art: `:art:` |
+   | Refactor code | :hammer: `:hammer:` |
+   | Removing code/files | :fire: `:fire:` |
+
+---
 
 # Screenshots
 
