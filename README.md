@@ -13,13 +13,20 @@ Tweeter is a simple, single-page Twitter clone based on responsive web design pr
 
 # Screenshots
 
-Welcome Page
+## Welcome Page
+
 !['welcome page](https://raw.githubusercontent.com/letsandeepio/tweeter/master/public/screenshots/welcome.png)
-Tweet Actions that appear with Hover
+
+## Tweet Actions that appear with Hover
+
 !['Tweet actions button'](https://raw.githubusercontent.com/letsandeepio/tweeter/master/public/screenshots/tweet-action-buttons.png)
-Responsive Mobile View
+
+## Responsive Mobile View
+
 !['Mobile View'](https://raw.githubusercontent.com/letsandeepio/tweeter/master/public/screenshots/mobile-view.png)
-Tweet Validation & Error Messages
+
+## Tweet Validation & Error Messages
+
 !['tweet composer'](https://raw.githubusercontent.com/letsandeepio/tweeter/master/public/screenshots/tweetcomposer.png)
 
 ## Getting Started
