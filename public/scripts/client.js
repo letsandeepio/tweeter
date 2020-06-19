@@ -64,7 +64,7 @@ const renderTweets = function (tweets, callback) {
   callback();
 };
 
-//load tweets through AJAX Request
+//load tweets through AJAX Request and attach required event listeners after loading
 const loadtweets = () => {
   $.ajax('/tweets', { method: 'GET' }).then(function (tweetsData) {
     renderTweets(tweetsData, attachEventListeners);
@@ -72,37 +72,47 @@ const loadtweets = () => {
 };
 
 $(document).ready(function () {
+  //global JQuery Objects;
+  const errorDiv = $('#js--error-bar'); //for displaying the error
+  const tweetText = $('#tweet-text'); //text area containing the user input text
+  const tweetsContainer = $('#tweets-container'); //the container which contains the rendered tweets
+  const tweetComposeButton = $('#js--cta-newtweet'); //the compose new tweet button for toggling tweet composer
+  const tweetComposer = $('.tweet-composer'); //the tweet composer component
+  const scrollButton = $('.scrollToTop'); //dynamic scroll to top button
+
   loadtweets();
 
   $('#js--new-tweet').submit(function (event) {
-    const errorDiv = $('#js--error-bar');
     errorDiv.slideUp();
     event.preventDefault();
-    const tweetText = $('#tweet-text').val();
-    if (tweetText.length === 0) {
-      errorDiv.text('Tweet cannot be empty').slideDown();
+    const tweetTextVal = tweetText.val();
+
+    //tweet validation
+    if (tweetTextVal.length === 0) {
+      errorDiv.slideDown().text('Tweet cannot be empty');
       return false;
     }
-    if (tweetText.length > 140) {
-      errorDiv.text('Your Tweet is too long').slideDown();
+    if (tweetTextVal.length > 140) {
+      errorDiv.slideDown().text('Your Tweet is too long');
       return false;
     }
+    //if successful
     $.ajax('/tweets', { method: 'POST', data: $(this).serialize() }).then(
       function () {
-        $('#tweets-container').empty();
+        tweetsContainer.empty();
         loadtweets();
       }
     );
 
-    $('#tweet-text').val('');
+    //reset the contents of the tweet text area
+    tweetText.val('');
   });
 
-  $('#js--cta-newtweet').click(function (e) {
+  tweetComposeButton.click(function (e) {
     e.preventDefault();
-    $('.tweet-composer').slideToggle(function () {
-      console.log($('.tweet-composer').css('display'));
-      if ($('.tweet-composer').css('display') === 'block') {
-        $('#tweet-text').focus();
+    tweetComposer.slideToggle(function () {
+      if (tweetComposer.css('display') === 'block') {
+        tweetText.focus();
       }
     });
   });
@@ -110,14 +120,14 @@ $(document).ready(function () {
   //Check to see if the window is top if not then display button
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
-      $('.scrollToTop').fadeIn();
+      scrollButton.fadeIn();
     } else {
-      $('.scrollToTop').fadeOut();
+      scrollButton.fadeOut();
     }
   });
 
   //Click event to scroll to top
-  $('.scrollToTop').click(function () {
+  scrollButton.click(function () {
     $('html, body').animate({ scrollTop: 0 }, 800);
     return false;
   });
